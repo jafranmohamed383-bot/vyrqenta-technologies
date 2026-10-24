@@ -2408,3 +2408,57 @@ img {
     grid-template-columns: 1fr !important;
   }
 }
+/* CASE STUDY - FORCE CARD LAYOUT */
+#portfolio .portfolio-grid,
+#portfolio .case-studies-grid,
+#portfolio .case-study-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 20px !important;
+  width: 100%;
+  max-width: 1200px;
+  margin: 35px auto;
+  align-items: stretch;
+}
+
+#portfolio .portfolio-card,
+#portfolio .case-study-card,
+#portfolio .project-card {
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 24px;
+  border: 1px solid rgba(87, 185, 255, 0.45);
+  border-radius: 16px;
+  background: linear-gradient(145deg, #15223a, #0b1120);
+  overflow-wrap: anywhere;
+}
+
+#portfolio .portfolio-card h3,
+#portfolio .case-study-card h3,
+#portfolio .project-card h3 {
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+#portfolio .portfolio-card p,
+#portfolio .case-study-card p,
+#portfolio .project-card p {
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  #portfolio .portfolio-grid,
+  #portfolio .case-studies-grid,
+  #portfolio .case-study-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  #portfolio .portfolio-grid,
+  #portfolio .case-studies-grid,
+  #portfolio .case-study-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
