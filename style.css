@@ -1868,3 +1868,58 @@ img {
     grid-template-columns: 1fr;
   }
 }
+/* Vyrqenta Pricing Cards - Final Layout */
+#pricing .pricing-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 24px !important;
+  max-width: 1200px;
+  margin: 40px auto 0;
+  align-items: stretch;
+}
+
+#pricing .pricing-card {
+  display: flex !important;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+  padding: 28px;
+  box-sizing: border-box;
+  border: 1px solid rgba(120, 160, 255, 0.3);
+  border-radius: 18px;
+  background: linear-gradient(145deg, #15223a, #0b1120);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+#pricing .pricing-card h3 {
+  margin: 14px 0;
+  font-size: 22px;
+}
+
+#pricing .pricing-card ul {
+  flex: 1;
+  padding: 18px 0;
+  list-style: none;
+}
+
+#pricing .pricing-card li {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+#pricing .pricing-featured {
+  border-color: #57b9ff;
+  box-shadow: 0 0 24px rgba(50, 150, 255, 0.12);
+}
+
+@media (max-width: 900px) {
+  #pricing .pricing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  #pricing .pricing-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
