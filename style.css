@@ -2291,4 +2291,36 @@ transition: none;
 #portfolio.vp-portfolio .vp-button:hover {
 transform: none;
 }
+}/* TEMPORARY PORTFOLIO TEST */
+#portfolio.vp-portfolio {
+  background: #080d19 !important;
+  padding: 60px 20px !important;
+}
+
+#portfolio.vp-portfolio .vp-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 20px !important;
+}
+
+#portfolio.vp-portfolio .vp-card {
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 25px !important;
+  border: 2px solid cyan !important;
+  border-radius: 18px !important;
+  background: #15223a !important;
+  color: white !important;
+}
+
+@media (max-width: 900px) {
+  #portfolio.vp-portfolio .vp-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  #portfolio.vp-portfolio .vp-grid {
+    grid-template-columns: 1fr !important;
+  }
 }
