@@ -1832,6 +1832,36 @@ img {
     grid-template-columns: 1fr 1fr;
   }
 }
+/* PRICING LAYOUT FIX */
+#pricing .pricing-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 24px;
+  align-items: stretch;
+  width: 100%;
+}
+
+#pricing .pricing-card {
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#pricing .pricing-card ul {
+  padding-left: 0;
+}
+
+@media (max-width: 900px) {
+  #pricing .pricing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  #pricing .pricing-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
 
 @media (max-width: 600px) {
   .pricing-grid {
