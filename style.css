@@ -1722,173 +1722,58 @@ img {
     max-width: 100%;
   }
 }
-/* PRICING SECTION */
+* ========================================
+   VYRQENTA TECHNOLOGIES - PRICING SECTION
+======================================== */
+
 .pricing-section {
-  background:
-    radial-gradient(ellipse at 50% 0%,
-    rgba(84, 135, 255, 0.08), transparent 60%);
+  background: radial-gradient(
+    ellipse at 50% 0%,
+    rgba(84, 135, 255, 0.08),
+    transparent 60%
+  );
 }
 
-.pricing-grid {
+#pricing .pricing-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
-  align-items: stretch;
-}
-
-.pricing-card {
-  display: flex;
-  flex-direction: column;
-  padding: 30px 26px;
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  background: linear-gradient(145deg, #121b30, #0c111f);
-  transition: transform 0.25s ease, border-color 0.25s ease;
-}
-
-.pricing-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(120, 151, 255, 0.45);
-}
-
-.pricing-featured {
-  border-color: rgba(120, 151, 255, 0.55);
-  background: linear-gradient(145deg, #182749, #10172a);
-}
-
-.pricing-label {
-  color: #a9beff;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-}
-
-.pricing-card h3 {
-  margin-top: 14px;
-  font-size: 21px;
-}
-
-.pricing-description,
-.pricing-caption {
-  color: var(--muted);
-  font-size: 13px;
-}
-
-.pricing-description {
-  margin: 10px 0 20px;
-}
-
-.pricing-price {
-  font-size: clamp(32px, 3vw, 42px);
-  font-weight: 800;
-  letter-spacing: -1.5px;
-}
-
-.pricing-price span {
-  color: #a9beff;
-}
-
-.pricing-caption {
-  margin-bottom: 20px;
-}
-
-.pricing-card ul {
-  list-style: none;
-  margin: 0 0 26px;
-  padding: 18px 0;
-  border-top: 1px solid var(--border);
-  flex: 1;
-}
-
-.pricing-card li {
-  position: relative;
-  padding: 7px 0 7px 23px;
-  color: #dce5fb;
-  font-size: 13px;
-}
-
-.pricing-card li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: #72e8b4;
-  font-weight: 800;
-}
-
-.pricing-card .btn {
-  width: 100%;
-}
-
-.pricing-note {
-  max-width: 780px;
-  margin: 28px auto 0;
-  color: var(--muted);
-  font-size: 12px;
-  text-align: center;
-}
-
-@media (max-width: 900px) {
-  .pricing-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-/* PRICING LAYOUT FIX */
-#pricing .pricing-grid {
-  display: grid !important;
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   gap: 24px;
   align-items: stretch;
   width: 100%;
-}
-
-#pricing .pricing-card {
-  min-width: 0;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-#pricing .pricing-card ul {
-  padding-left: 0;
-}
-
-@media (max-width: 900px) {
-  #pricing .pricing-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  }
-}
-
-@media (max-width: 600px) {
-  #pricing .pricing-grid {
-    grid-template-columns: 1fr !important;
-  }
-}
-
-@media (max-width: 600px) {
-  .pricing-grid {
-    grid-template-columns: 1fr;
-  }
-}
-/* Vyrqenta Pricing Cards - Final Layout */
-#pricing .pricing-grid {
-  display: grid !important;
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-  gap: 24px !important;
   max-width: 1200px;
   margin: 40px auto 0;
-  align-items: stretch;
 }
 
 #pricing .pricing-card {
-  display: flex !important;
+  display: flex;
   flex-direction: column;
-  width: 100%;
   min-width: 0;
+  width: 100%;
   padding: 28px;
   box-sizing: border-box;
   border: 1px solid rgba(120, 160, 255, 0.3);
   border-radius: 18px;
   background: linear-gradient(145deg, #15223a, #0b1120);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+#pricing .pricing-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(120, 151, 255, 0.65);
+}
+
+#pricing .pricing-featured {
+  border-color: #57b9ff;
+  background: linear-gradient(145deg, #182749, #10172a);
+  box-shadow: 0 0 24px rgba(50, 150, 255, 0.12);
+}
+
+#pricing .pricing-label {
+  color: #a9beff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
 }
 
 #pricing .pricing-card h3 {
@@ -1896,25 +1781,84 @@ img {
   font-size: 22px;
 }
 
+#pricing .pricing-description,
+#pricing .pricing-caption {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+#pricing .pricing-description {
+  margin: 10px 0 20px;
+}
+
+#pricing .pricing-price {
+  font-size: clamp(32px, 3vw, 42px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+}
+
+#pricing .pricing-price span {
+  color: #a9beff;
+}
+
+#pricing .pricing-caption {
+  margin-bottom: 20px;
+}
+
 #pricing .pricing-card ul {
   flex: 1;
-  padding: 18px 0;
   list-style: none;
+  margin: 0 0 26px;
+  padding: 18px 0;
+  border-top: 1px solid var(--border);
 }
 
 #pricing .pricing-card li {
-  margin: 10px 0;
+  position: relative;
+  margin: 0;
+  padding: 8px 0 8px 23px;
+  color: #dce5fb;
+  font-size: 13px;
   line-height: 1.6;
 }
 
-#pricing .pricing-featured {
-  border-color: #57b9ff;
-  box-shadow: 0 0 24px rgba(50, 150, 255, 0.12);
+#pricing .pricing-card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #72e8b4;
+  font-weight: 800;
 }
 
+#pricing .pricing-card .btn {
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#pricing .pricing-note {
+  max-width: 780px;
+  margin: 28px auto 0;
+  color: var(--muted);
+  font-size: 12px;
+  text-align: center;
+}
+
+/* Tablet */
 @media (max-width: 900px) {
   #pricing .pricing-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  #pricing .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #pricing .pricing-card {
+    padding: 24px;
   }
 }
 
