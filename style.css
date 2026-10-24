@@ -2089,3 +2089,41 @@ img {
     padding: 22px 10px;
   }
 }
+/* TECH STACK FINAL OVERRIDE */
+#tech-stack .tech-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 18px;
+  width: 100%;
+}
+
+#tech-stack .tech-card {
+  display: block;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#tech-stack .tech-card img {
+  width: 42px !important;
+  height: 42px !important;
+  max-width: 42px !important;
+  object-fit: contain;
+  margin: 0 auto 16px;
+}
+
+#tech-stack .tech-card h3 {
+  font-size: 16px !important;
+}
+
+@media (max-width: 900px) {
+  #tech-stack .tech-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #tech-stack .tech-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
