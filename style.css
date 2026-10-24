@@ -1943,73 +1943,352 @@ img {
   object-fit: contain;
   margin: 0 auto 10px;
 }
-/* VYRQENTA PORTFOLIO - PERMANENT GRID FIX */
+/* ==========================================
+VYRQENTA TECHNOLOGIES
+NEW PORTFOLIO DESIGN
+Unique classes: vp-
+========================================== */
 
-#portfolio .case-studies-grid {
-  display: grid !important;
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-  gap: 22px !important;
-  width: 100% !important;
-  margin: 0 auto !important;
+#portfolio.vp-portfolio {
+display: block;
+position: relative;
+width: 100%;
+padding: 88px 20px;
+overflow: hidden;
+isolation: isolate;
+background:
+radial-gradient(ellipse at 50% 0%, rgba(63, 135, 255, 0.14), transparent 60%),
+#080d19;
+color: #f4f7ff;
+font-family: inherit;
 }
 
-#portfolio .case-study-card {
-  display: flex !important;
-  flex-direction: column !important;
-  min-width: 0 !important;
-  width: 100% !important;
-  padding: 26px 24px !important;
-  border: 1px solid rgba(120, 160, 255, 0.4) !important;
-  border-radius: 18px !important;
-  background: linear-gradient(145deg, #15223a, #0c111f) !important;
-  color: #f4f7ff !important;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2) !important;
+#portfolio.vp-portfolio,
+#portfolio.vp-portfolio * {
+box-sizing: border-box;
 }
 
-#portfolio .case-study-card h3 {
-  color: #f4f7ff !important;
+#portfolio.vp-portfolio .vp-container {
+width: 100%;
+max-width: 1200px;
+margin: 0 auto;
 }
+
+/* Heading */
+
+#portfolio.vp-portfolio .vp-heading {
+max-width: 760px;
+margin: 0 auto 44px;
+text-align: center;
+}
+
+#portfolio.vp-portfolio .vp-eyebrow {
+display: inline-block;
+margin-bottom: 14px;
+color: #72cfff;
+font-size: 11px;
+font-weight: 800;
+letter-spacing: 2px;
+text-transform: uppercase;
+}
+
+#portfolio.vp-portfolio .vp-heading h2 {
+margin: 0 0 16px;
+color: #f4f7ff;
+font-size: clamp(28px, 4vw, 44px);
+font-weight: 800;
+line-height: 1.2;
+letter-spacing: -0.8px;
+}
+
+#portfolio.vp-portfolio .vp-heading p {
+max-width: 650px;
+margin: 0 auto;
+color: #aab8d0;
+font-size: 14px;
+line-height: 1.9;
+}
+
+/* Grid */
+
+#portfolio.vp-portfolio .vp-grid {
+display: grid !important;
+grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+align-items: stretch;
+gap: 24px;
+width: 100%;
+margin: 0 auto;
+}
+
+/* Cards */
+
+#portfolio.vp-portfolio .vp-card {
+display: flex !important;
+flex-direction: column !important;
+min-width: 0;
+width: 100%;
+margin: 0;
+padding: 26px 24px;
+border: 1px solid rgba(114, 207, 255, 0.24);
+border-radius: 20px;
+background: linear-gradient(145deg, #15223a, #0c111f) !important;
+color: #f4f7ff;
+box-shadow: 0 14px 36px rgba(0, 0, 0, 0.22);
+overflow-wrap: anywhere;
+transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+#portfolio.vp-portfolio .vp-card:hover {
+transform: translateY(-5px);
+border-color: rgba(114, 207, 255, 0.7);
+box-shadow: 0 20px 42px rgba(0, 0, 0, 0.3);
+}
+
+/* Card top */
+
+#portfolio.vp-portfolio .vp-card-top {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 10px;
+margin-bottom: 20px;
+}
+
+#portfolio.vp-portfolio .vp-tag {
+color: #72cfff;
+font-size: 10px;
+font-weight: 800;
+letter-spacing: 1px;
+line-height: 1.6;
+}
+
+#portfolio.vp-portfolio .vp-number {
+display: inline-flex;
+flex: 0 0 36px;
+width: 36px;
+height: 36px;
+justify-content: center;
+align-items: center;
+border: 1px solid rgba(114, 207, 255, 0.35);
+border-radius: 11px;
+background: rgba(87, 185, 255, 0.09);
+color: #72cfff;
+font-size: 12px;
+font-weight: 800;
+}
+
+/* Icon */
+
+#portfolio.vp-portfolio .vp-icon {
+display: flex;
+width: 54px;
+height: 54px;
+align-items: center;
+justify-content: center;
+margin-bottom: 18px;
+border: 1px solid rgba(114, 207, 255, 0.22);
+border-radius: 15px;
+background: rgba(87, 185, 255, 0.09);
+font-size: 26px;
+}
+
+/* Titles and summary */
+
+#portfolio.vp-portfolio .vp-card h3 {
+margin: 0 0 12px;
+color: #f4f7ff;
+font-size: 21px;
+font-weight: 800;
+line-height: 1.4;
+}
+
+#portfolio.vp-portfolio .vp-summary {
+margin: 0 0 20px;
+color: #aab8d0;
+font-size: 13px;
+line-height: 1.8;
+}
+
+/* Details */
+
+#portfolio.vp-portfolio .vp-detail {
+margin: 0;
+padding: 15px 0;
+border-top: 1px solid rgba(120, 160, 255, 0.17);
+}
+
+#portfolio.vp-portfolio .vp-detail h4 {
+margin: 0 0 7px;
+color: #72cfff;
+font-size: 13px;
+font-weight: 800;
+line-height: 1.5;
+}
+
+#portfolio.vp-portfolio .vp-detail p {
+margin: 0;
+color: #dce5fb;
+font-size: 13px;
+line-height: 1.8;
+}
+
+/* Technology tags */
+
+#portfolio.vp-portfolio .vp-tags {
+display: flex;
+flex-wrap: wrap;
+gap: 8px;
+margin-top: auto;
+padding-top: 20px;
+}
+
+#portfolio.vp-portfolio .vp-tags span {
+display: inline-block;
+max-width: 100%;
+padding: 6px 10px;
+border: 1px solid rgba(120, 160, 255, 0.25);
+border-radius: 8px;
+background: rgba(87, 185, 255, 0.07);
+color: #c7d8ff;
+font-size: 11px;
+line-height: 1.5;
+}
+
+/* Disclaimer */
+
+#portfolio.vp-portfolio .vp-disclaimer {
+max-width: 760px;
+margin: 28px auto 0;
+color: #899ab6;
+font-size: 12px;
+line-height: 1.8;
+text-align: center;
+}
+
+/* Call to action */
+
+#portfolio.vp-portfolio .vp-cta {
+margin: 44px auto 0;
+padding: 30px 20px;
+border: 1px solid rgba(114, 207, 255, 0.2);
+border-radius: 18px;
+background: rgba(20, 35, 60, 0.65);
+text-align: center;
+}
+
+#portfolio.vp-portfolio .vp-cta h3 {
+margin: 0 0 10px;
+color: #f4f7ff;
+font-size: 23px;
+}
+
+#portfolio.vp-portfolio .vp-cta p {
+margin: 0 0 20px;
+color: #aab8d0;
+font-size: 14px;
+line-height: 1.8;
+}
+
+#portfolio.vp-portfolio .vp-button {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+min-height: 46px;
+padding: 12px 20px;
+border: 1px solid #72cfff;
+border-radius: 10px;
+background: #72cfff;
+color: #07101e;
+font-size: 13px;
+font-weight: 800;
+text-decoration: none;
+transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#portfolio.vp-portfolio .vp-button:hover {
+transform: translateY(-2px);
+background: #a0e0ff;
+}
+
+/* Tablet */
 
 @media (max-width: 900px) {
-  #portfolio .case-studies-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  }
+#portfolio.vp-portfolio {
+padding: 70px 20px;
 }
 
-@media (max-width: 600px ) {
-  #portfolio .case-studies-grid {
-    grid-template-columns: 1fr !important;
-  }
+#portfolio.vp-portfolio .vp-grid {
+grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+gap: 18px;
 }
+
+#portfolio.vp-portfolio .vp-card {
+padding: 23px 20px;
+}
+}
+
+/* Mobile */
 
 @media (max-width: 600px) {
-  html body #portfolio.case-studies-section .case-studies-grid {
-    grid-template-columns: 1fr !important;
-  }
-}
-/* FIX: Portfolio cards not receiving styles */
-
-#portfolio .case-study-card {
-  display: flex !important;
-  flex-direction: column !important;
-  box-sizing: border-box !important;
-  min-width: 0 !important;
-  padding: 26px 24px !important;
-  border: 2px solid #42618b !important;
-  border-radius: 18px !important;
-  background: #15223a !important;
-  color: #f4f7ff !important;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25) !important;
+#portfolio.vp-portfolio {
+padding: 55px 16px;
 }
 
-#portfolio .case-study-card h3 {
-  color: #f4f7ff !important;
+#portfolio.vp-portfolio .vp-heading {
+margin-bottom: 30px;
 }
 
-#portfolio .case-study-card h4 {
-  color: #72cfff !important;
+#portfolio.vp-portfolio .vp-heading h2 {
+font-size: 29px;
 }
 
-#portfolio .case-study-card p {
-  color: #dce5fb !important;
+#portfolio.vp-portfolio .vp-heading p {
+font-size: 13px;
+}
+
+#portfolio.vp-portfolio .vp-grid {
+grid-template-columns: minmax(0, 1fr) !important;
+gap: 16px;
+}
+
+#portfolio.vp-portfolio .vp-card {
+padding: 22px 19px;
+border-radius: 16px;
+}
+
+#portfolio.vp-portfolio .vp-card h3 {
+font-size: 20px;
+}
+
+#portfolio.vp-portfolio .vp-cta h3 {
+font-size: 21px;
+}
+}
+
+/* Small phones */
+
+@media (max-width: 360px) {
+#portfolio.vp-portfolio {
+padding-right: 12px;
+padding-left: 12px;
+}
+
+#portfolio.vp-portfolio .vp-card {
+padding: 18px 15px;
+}
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+#portfolio.vp-portfolio .vp-card,
+#portfolio.vp-portfolio .vp-button {
+transition: none;
+}
+
+#portfolio.vp-portfolio .vp-card:hover,
+#portfolio.vp-portfolio .vp-button:hover {
+transform: none;
+}
 }
