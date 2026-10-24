@@ -1722,3 +1722,119 @@ img {
     max-width: 100%;
   }
 }
+/* PRICING SECTION */
+.pricing-section {
+  background:
+    radial-gradient(ellipse at 50% 0%,
+    rgba(84, 135, 255, 0.08), transparent 60%);
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 26px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: linear-gradient(145deg, #121b30, #0c111f);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(120, 151, 255, 0.45);
+}
+
+.pricing-featured {
+  border-color: rgba(120, 151, 255, 0.55);
+  background: linear-gradient(145deg, #182749, #10172a);
+}
+
+.pricing-label {
+  color: #a9beff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.pricing-card h3 {
+  margin-top: 14px;
+  font-size: 21px;
+}
+
+.pricing-description,
+.pricing-caption {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.pricing-description {
+  margin: 10px 0 20px;
+}
+
+.pricing-price {
+  font-size: clamp(32px, 3vw, 42px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+}
+
+.pricing-price span {
+  color: #a9beff;
+}
+
+.pricing-caption {
+  margin-bottom: 20px;
+}
+
+.pricing-card ul {
+  list-style: none;
+  margin: 0 0 26px;
+  padding: 18px 0;
+  border-top: 1px solid var(--border);
+  flex: 1;
+}
+
+.pricing-card li {
+  position: relative;
+  padding: 7px 0 7px 23px;
+  color: #dce5fb;
+  font-size: 13px;
+}
+
+.pricing-card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #72e8b4;
+  font-weight: 800;
+}
+
+.pricing-card .btn {
+  width: 100%;
+}
+
+.pricing-note {
+  max-width: 780px;
+  margin: 28px auto 0;
+  color: var(--muted);
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .pricing-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+}
