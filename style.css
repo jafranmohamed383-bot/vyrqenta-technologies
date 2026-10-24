@@ -1961,6 +1961,51 @@ img {
     padding: 0 16px 18px;
   }
 }
+/* FAQ polish */
+.faq-item {
+  border: 1px solid rgba(120, 160, 255, 0.25);
+  border-radius: 14px;
+  background: linear-gradient(145deg, #121b30, #0c111f);
+  overflow: hidden;
+}
+
+.faq-item summary {
+  list-style: none;
+  position: relative;
+  padding: 20px 52px 20px 22px;
+  cursor: pointer;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::marker {
+  content: "";
+}
+
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #72cfff;
+  font-size: 24px;
+}
+
+.faq-item[open] summary::after {
+  content: "−";
+}
+
+.faq-item[open] {
+  border-color: #57b9ff;
+}
+
+.faq-item p {
+  line-height: 1.8;
+  padding: 0 22px 20px;
+}
 
 @media (max-width: 600px) {
   #pricing .pricing-grid {
