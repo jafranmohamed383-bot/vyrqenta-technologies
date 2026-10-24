@@ -1987,3 +1987,29 @@ img {
     grid-template-columns: 1fr !important;
   }
 }
+/* FIX: Portfolio cards not receiving styles */
+
+#portfolio .case-study-card {
+  display: flex !important;
+  flex-direction: column !important;
+  box-sizing: border-box !important;
+  min-width: 0 !important;
+  padding: 26px 24px !important;
+  border: 2px solid #42618b !important;
+  border-radius: 18px !important;
+  background: #15223a !important;
+  color: #f4f7ff !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25) !important;
+}
+
+#portfolio .case-study-card h3 {
+  color: #f4f7ff !important;
+}
+
+#portfolio .case-study-card h4 {
+  color: #72cfff !important;
+}
+
+#portfolio .case-study-card p {
+  color: #dce5fb !important;
+}
