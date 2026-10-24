@@ -2498,3 +2498,33 @@ img {
     transform: none;
   }
 }
+/* TEMPORARY CASE STUDY DEBUG FIX */
+#portfolio .case-studies-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 35px auto !important;
+  gap: 20px !important;
+}
+
+#portfolio .case-study-card {
+  display: flex !important;
+  flex-direction: column !important;
+  min-width: 0 !important;
+  width: 100% !important;
+  padding: 24px !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 900px) {
+  #portfolio .case-studies-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  #portfolio .case-studies-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
