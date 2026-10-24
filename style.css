@@ -2257,7 +2257,7 @@ img {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 600px ) {
   #portfolio .case-studies-grid {
     grid-template-columns: 1fr !important;
   }
