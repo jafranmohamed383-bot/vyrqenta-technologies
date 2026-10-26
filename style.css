@@ -1086,7 +1086,6 @@ footer {
     transform: none;
   }
 }
-```css
 /* Founder / Team Section */
 .team-section {
   padding: 80px 0;
@@ -1165,55 +1164,15 @@ footer {
     font-size: 1.5rem;
   }
 }
-/* Privacy Policy & Terms */
+```css
+/* Privacy Policy & Terms - Responsive Styling */
+
 .legal-section {
-  padding: 70px 0;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 60px 20px;
   border-top: 1px solid var(--border, #263449);
-}
-
-.legal-section .container {
-  max-width: 900px;
-}
-
-.legal-section h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
-  margin: 12px 0;
-}
-
-.legal-section h3 {
-  margin: 30px 0 10px;
-  font-size: 1.15rem;
-}
-
-.legal-section p,
-.legal-section li {
-  color: var(--muted, #aab6c8);
-  line-height: 1.8;
-}
-
-.legal-section ul {
-  padding-left: 24px;
-}
-
-.legal-updated {
-  font-size: 0.9rem;
-  margin-bottom: 28px;
-}
-
-.legal-section a {
-  color: #42d9d0;
-  overflow-wrap: anywhere;
-}
-
-@media (max-width: 600px) {
-  .legal-section {
-    padding: 48px 0;
-  }
-}
-/* Privacy Policy & Terms - Professional Styling */
-
-.legal-section {
-  padding: 70px 20px;
   line-height: 1.8;
   overflow-wrap: anywhere;
 }
@@ -1225,30 +1184,24 @@ footer {
 }
 
 .legal-section h2 {
+  color: #fff;
   font-size: clamp(2rem, 5vw, 3rem);
   line-height: 1.2;
   margin: 12px 0 16px;
-  color: #ffffff;
-}
-
-.legal-section .legal-updated {
-  font-size: 0.9rem;
-  color: #aab6c8;
-  margin-bottom: 32px;
 }
 
 .legal-section h3 {
+  color: #fff;
   font-size: 1.2rem;
-  line-height: 1.4;
+  line-height: 1.5;
   margin: 30px 0 10px;
-  color: #ffffff;
 }
 
 .legal-section p,
 .legal-section li {
+  color: #cbd5e1;
   font-size: 1rem;
   line-height: 1.8;
-  color: #cbd5e1;
 }
 
 .legal-section ul {
@@ -1260,23 +1213,30 @@ footer {
   margin-bottom: 8px;
 }
 
+.legal-section .legal-updated {
+  color: #aab6c8;
+  font-size: 0.9rem;
+  margin-bottom: 32px;
+}
+
 .legal-section a {
   color: #42d9d0;
-  text-decoration: underline;
   overflow-wrap: anywhere;
+  text-decoration: underline;
 }
 
 .legal-section a:hover {
-  color: #ffffff;
+  color: #fff;
 }
 
 .legal-section + .legal-section {
   border-top: 1px solid #263449;
 }
 
-@media (max-width: 600px) {
+/* Mobile */
+@media screen and (max-width: 600px) {
   .legal-section {
-    padding: 42px 18px;
+    padding: 40px 16px;
   }
 
   .legal-section h2 {
@@ -1291,62 +1251,6 @@ footer {
   .legal-section p,
   .legal-section li {
     font-size: 0.95rem;
-  }
-}
-
-```css
-/* FORCE FIX: Privacy Policy and Terms */
-html body section.legal-section {
-  display: block !important;
-  width: 100% !important;
-  padding: 60px 20px !important;
-  box-sizing: border-box !important;
-  line-height: 1.8 !important;
-  overflow-wrap: anywhere !important;
-}
-
-html body section.legal-section .container {
-  display: block !important;
-  width: 100% !important;
-  max-width: 900px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-html body section.legal-section h2 {
-  font-size: 42px !important;
-  line-height: 1.2 !important;
-  margin: 12px 0 20px !important;
-}
-
-html body section.legal-section h3 {
-  font-size: 20px !important;
-  line-height: 1.5 !important;
-  margin: 28px 0 10px !important;
-}
-
-html body section.legal-section p,
-html body section.legal-section li {
-  font-size: 16px !important;
-  line-height: 1.8 !important;
-}
-
-@media screen and (max-width: 600px) {
-  html body section.legal-section {
-    padding: 35px 16px !important;
-  }
-
-  html body section.legal-section h2 {
-    font-size: 30px !important;
-  }
-
-  html body section.legal-section h3 {
-    font-size: 18px !important;
-  }
-
-  html body section.legal-section p,
-  html body section.legal-section li {
-    font-size: 15px !important;
   }
 }
 
