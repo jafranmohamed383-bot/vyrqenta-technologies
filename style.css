@@ -1210,8 +1210,6 @@ footer {
     padding: 48px 0;
   }
 }
-
-```css
 /* Privacy Policy & Terms - Professional Styling */
 
 .legal-section {
@@ -1295,4 +1293,61 @@ footer {
     font-size: 0.95rem;
   }
 }
+
+```css
+/* FORCE FIX: Privacy Policy and Terms */
+html body section.legal-section {
+  display: block !important;
+  width: 100% !important;
+  padding: 60px 20px !important;
+  box-sizing: border-box !important;
+  line-height: 1.8 !important;
+  overflow-wrap: anywhere !important;
+}
+
+html body section.legal-section .container {
+  display: block !important;
+  width: 100% !important;
+  max-width: 900px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+html body section.legal-section h2 {
+  font-size: 42px !important;
+  line-height: 1.2 !important;
+  margin: 12px 0 20px !important;
+}
+
+html body section.legal-section h3 {
+  font-size: 20px !important;
+  line-height: 1.5 !important;
+  margin: 28px 0 10px !important;
+}
+
+html body section.legal-section p,
+html body section.legal-section li {
+  font-size: 16px !important;
+  line-height: 1.8 !important;
+}
+
+@media screen and (max-width: 600px) {
+  html body section.legal-section {
+    padding: 35px 16px !important;
+  }
+
+  html body section.legal-section h2 {
+    font-size: 30px !important;
+  }
+
+  html body section.legal-section h3 {
+    font-size: 18px !important;
+  }
+
+  html body section.legal-section p,
+  html body section.legal-section li {
+    font-size: 15px !important;
+  }
+}
+
 
