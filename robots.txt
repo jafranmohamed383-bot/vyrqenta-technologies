@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jafranmohamed383-bot.github.io/vyrqenta-technologies/sitemap.xml
