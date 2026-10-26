@@ -516,111 +516,7 @@
         </div>
       </div>
     </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <div class="container contact-grid">
-        <div>
-          <span class="eyebrow">Contact Us</span>
-          <h2>Have an Idea? Let's Build It.</h2>
-          <p>Tell us about your business and the digital solution you need.</p>
-          <p style="margin-top:20px">
-            Email: <a href="mailto:vyrqentatechnologies@gmail.com">vyrqentatechnologies@gmail.com</a>
-          </p>
-          <p style="margin-top:10px">Serving clients in India and internationally.</p>
-        </div>
-
-        <form class="contact-form" id="contactForm">
-          <div class="field">
-            <label for="name">Your Name</label>
-            <input id="name" name="name" required placeholder="Your name">
-          </div>
-
-          <div class="field">
-            <label for="email">Email Address</label>
-            <input id="email" name="email" type="email" required placeholder="you@example.com">
-          </div>
-
-          <div class="field">
-            <label for="service">Service Needed</label>
-            <select id="service" name="service" required>
-              <option value="">Choose a service</option>
-              <option>Website Development</option>
-              <option>Mobile App Development</option>
-              <option>Software Development</option>
-              <option>Cloud & DevOps</option>
-              <option>AI & Automation</option>
-              <option>IT Support & Security</option>
-              <option>Other</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="message">Project Details</label>
-            <textarea id="message" name="message" required placeholder="Tell us about your project"></textarea>
-          </div>
-
-          <button class="button" type="submit">Prepare Email Enquiry →</button>
-          <p class="form-note">This form opens your email app. It does not send the message automatically.</p>
-        </form>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <div class="footer-logo">
-  <img src="vyrqenta-full-logo.png.jpeg"
-       alt="Vyrqenta Technologies">
-</div>
-  <footer>
-    <div class="container">
-      © <span id="year"></span> Vyrqenta Technologies. All rights reserved.
-    </div>
-  </footer>
-
-  <script>
-    const menuToggle = document.getElementById("menuToggle");
-    const navLinks = document.getElementById("navLinks");
-
-    menuToggle.addEventListener("click", function () {
-      const open = navLinks.classList.toggle("open");
-      menuToggle.setAttribute("aria-expanded", String(open));
-      menuToggle.textContent = open ? "✕" : "☰";
-    });
-
-    navLinks.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", function () {
-        navLinks.classList.remove("open");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.textContent = "☰";
-      });
-    });
-
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-
-    document.getElementById("contactForm").addEventListener("submit", function (event) {
-      event.preventDefault();
-
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const service = document.getElementById("service").value;
-      const message = document.getElementById("message").value.trim();
-
-      const subject = encodeURIComponent("Project Enquiry - " + service);
-      const body = encodeURIComponent(
-        "Name: " + name +
-        "\nEmail: " + email +
-        "\nService: " + service +
-        "\n\nProject details:\n" + message
-      );
-
-      window.location.href =
-        "mailto:hello@vyrqenta.com?subject=" + subject + "&body=" + body;
-    });
-  </script>
-<!-- PRIVACY POLICY -->
+    <!-- PRIVACY POLICY -->
 <section id="privacy-policy" class="legal-section">
   <div class="container">
     <span class="eyebrow">YOUR PRIVACY MATTERS</span>
@@ -779,6 +675,111 @@
     </p>
   </div>
 </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container contact-grid">
+        <div>
+          <span class="eyebrow">Contact Us</span>
+          <h2>Have an Idea? Let's Build It.</h2>
+          <p>Tell us about your business and the digital solution you need.</p>
+          <p style="margin-top:20px">
+            Email: <a href="mailto:vyrqentatechnologies@gmail.com">vyrqentatechnologies@gmail.com</a>
+          </p>
+          <p style="margin-top:10px">Serving clients in India and internationally.</p>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="field">
+            <label for="name">Your Name</label>
+            <input id="name" name="name" required placeholder="Your name">
+          </div>
+
+          <div class="field">
+            <label for="email">Email Address</label>
+            <input id="email" name="email" type="email" required placeholder="you@example.com">
+          </div>
+
+          <div class="field">
+            <label for="service">Service Needed</label>
+            <select id="service" name="service" required>
+              <option value="">Choose a service</option>
+              <option>Website Development</option>
+              <option>Mobile App Development</option>
+              <option>Software Development</option>
+              <option>Cloud & DevOps</option>
+              <option>AI & Automation</option>
+              <option>IT Support & Security</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">Project Details</label>
+            <textarea id="message" name="message" required placeholder="Tell us about your project"></textarea>
+          </div>
+
+          <button class="button" type="submit">Prepare Email Enquiry →</button>
+          <p class="form-note">This form opens your email app. It does not send the message automatically.</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <div class="footer-logo">
+  <img src="vyrqenta-full-logo.png.jpeg"
+       alt="Vyrqenta Technologies">
+</div>
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Vyrqenta Technologies. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", function () {
+      const open = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(open));
+      menuToggle.textContent = open ? "✕" : "☰";
+    });
+
+    navLinks.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    document.getElementById("contactForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const service = document.getElementById("service").value;
+      const message = document.getElementById("message").value.trim();
+
+      const subject = encodeURIComponent("Project Enquiry - " + service);
+      const body = encodeURIComponent(
+        "Name: " + name +
+        "\nEmail: " + email +
+        "\nService: " + service +
+        "\n\nProject details:\n" + message
+      );
+
+      window.location.href =
+        "mailto:hello@vyrqenta.com?subject=" + subject + "&body=" + body;
+    });
+  </script>
+
 <script src="script.js" defer></script>
 </body>
 </html>
