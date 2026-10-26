@@ -207,42 +207,37 @@ summary:focus-visible {
   font-size: 1.35rem;
   cursor: pointer;
 }
+/* MOBILE NAVIGATION AND LAYOUT */
+
 @media (max-width: 760px) {
+  .container,
+  .tech-container {
+    width: calc(100% - 32px);
+  }
+
   .navbar {
-    position: relative;
+    min-height: 68px;
   }
 
   .menu-toggle {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    gap: 5px;
-    margin-left: auto;
-  }
-
-  .menu-toggle span {
-    display: block;
-    width: 20px;
-    height: 2px;
-    background: var(--text);
-    border-radius: 2px;
   }
 
   .nav-links {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 68px;
     left: 0;
     right: 0;
+    z-index: 1001;
+    padding: 10px 18px 18px;
+    border-bottom: 1px solid var(--border);
+    background: #080d1b;
     flex-direction: column;
     align-items: stretch;
     gap: 0;
-    padding: 12px 20px;
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    z-index: 1000;
   }
 
   .nav-links.open {
@@ -251,13 +246,202 @@ summary:focus-visible {
 
   .nav-links a {
     display: block;
-    padding: 12px 0;
+    padding: 12px 8px;
+    border-bottom: 1px solid rgba(180, 199, 235, 0.1);
+    font-size: 0.95rem;
+    white-space: normal;
   }
 
-  .header-cta {
-    display: none;
+  .nav-links a:last-child {
+    border-bottom: 0;
+  }
+
+  section {
+    padding: 58px 0;
+  }
+
+  .hero {
+    padding: 62px 0 55px;
+  }
+
+  .hero-grid,
+  .about-grid,
+  .contact-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 26px;
+  }
+
+  .hero-visual {
+    padding: 24px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.35rem, 8.5vw, 3.6rem);
+  }
+
+  .cards-grid,
+  .pricing-grid,
+  .portfolio-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .section-heading {
+    margin-bottom: 28px;
+  }
+
+  .faq-item summary {
+    padding: 16px;
+    font-size: 0.91rem;
+  }
+
+  .faq-item p {
+    padding: 0 16px 16px;
+    font-size: 0.88rem;
+  }
+
+  .contact-form {
+    padding: 20px;
   }
 }
+
+/* SMALL PHONES */
+
+@media (max-width: 480px) {
+  .container,
+  .tech-container {
+    width: calc(100% - 28px);
+  }
+
+  section {
+    padding: 48px 0;
+  }
+
+  .hero {
+    padding: 52px 0 45px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.2rem, 10vw, 2.8rem);
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+  }
+
+  .hero-visual {
+    padding: 20px;
+  }
+
+  .cards-grid,
+  .pricing-grid,
+  .portfolio-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .tech-card {
+    min-height: 125px;
+    padding: 17px 7px;
+  }
+
+  .tech-card img {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 9px;
+  }
+
+  .tech-card h3 {
+    font-size: 0.9rem;
+  }
+
+  .tech-card p {
+    font-size: 0.72rem;
+  }
+
+  .process-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .faq-item summary {
+    padding: 15px 13px;
+    font-size: 0.88rem;
+  }
+
+  .faq-item p {
+    padding: 0 13px 15px;
+    font-size: 0.85rem;
+  }
+
+  .contact-form {
+    padding: 17px;
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+.logo img {
+  display: block;
+  width: 200px;
+  height: auto;
+  max-height: 65px;
+  object-fit: contain;
+}
+
+.footer-logo img {
+  display: block;
+  width: 180px;
+  height: auto;
+  max-height: 70px;
+  object-fit: contain;
+}
+
+@media (max-width: 760px) {
+  .logo img {
+    width: 150px;
+    max-height: 50px;
+  }
+
+  .footer-logo img {
+    width: 150px;
+    max-height: 55px;
+  }
+}
+
 /* HERO */
 
 .hero {
